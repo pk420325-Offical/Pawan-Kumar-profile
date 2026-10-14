@@ -1,0 +1,1244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --text: #405c61;
+  --green: #27754e;
+  --white: #fffdfb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: #fff8f3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 78px;
+  padding: 14px 5%;
+  background: rgba(255,255,255,.97);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 3px 15px rgba(41,75,65,.06);
+}
+
+.logo {
+  color: #24754e;
+  font-size: 23px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #2199a5;
+}
+
+/* HOME LANDSCAPE */
+.hero {
+  min-height: 800px;
+  padding: 42px 20px 0;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #7bd4f1 0%,
+    #a9e8f4 44%,
+    #e7f0d9 76%,
+    #fff0bd 100%
+  );
+}
+
+.sun {
+  position: absolute;
+  top: 110px;
+  right: 17%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #ffdc69;
+  box-shadow: 0 0 0 22px #ffe98b42, 0 0 70px #fff2a080;
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  z-index: -1;
+  width: 150px;
+  height: 35px;
+  border-radius: 40px;
+  background: #ffffffcf;
+}
+
+.cloud i {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: #ffffffdc;
+}
+
+.cloud i:nth-child(1) {
+  width: 52px;
+  height: 52px;
+  left: 20px;
+  bottom: 7px;
+}
+
+.cloud i:nth-child(2) {
+  width: 75px;
+  height: 75px;
+  left: 52px;
+  bottom: 2px;
+}
+
+.cloud i:nth-child(3) {
+  width: 48px;
+  height: 48px;
+  left: 91px;
+  bottom: 5px;
+}
+
+.cloud-one {
+  top: 155px;
+  left: 10%;
+}
+
+.cloud-two {
+  top: 300px;
+  right: 9%;
+  transform: scale(.8);
+}
+
+.cloud-three {
+  top: 55px;
+  left: 43%;
+  transform: scale(.55);
+}
+
+.birds {
+  position: absolute;
+  z-index: -1;
+  color: #466f72;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.birds-one {
+  top: 315px;
+  left: 18%;
+}
+
+.birds-two {
+  top: 420px;
+  right: 21%;
+}
+
+/* Colored mountain silhouettes */
+.mountain {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.mountain-one {
+  height: 340px;
+  background: #91bdb3;
+  clip-path: polygon(
+    0 45%, 8% 35%, 17% 58%, 29% 20%,
+    40% 53%, 52% 35%, 64% 58%, 75% 8%,
+    88% 53%, 96% 33%, 100% 44%, 100% 100%, 0 100%
+  );
+}
+
+.mountain-two {
+  height: 255px;
+  background: #6f9f85;
+  clip-path: polygon(
+    0 15%, 9% 35%, 18% 25%, 31% 60%,
+    44% 34%, 56% 58%, 69% 31%, 82% 55%,
+    92% 22%, 100% 35%, 100% 100%, 0 100%
+  );
+}
+
+.mountain-three {
+  height: 160px;
+  background: #5c9565;
+  clip-path: polygon(
+    0 35%, 12% 45%, 24% 25%, 37% 52%,
+    51% 28%, 63% 42%, 78% 18%, 89% 35%,
+    100% 20%, 100% 100%, 0 100%
+  );
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  background: #7ebd69;
+  z-index: -1;
+}
+
+/* Transmission towers and wires */
+.transmission {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 360px;
+  bottom: 40px;
+  left: 0;
+  overflow: visible;
+}
+
+.tower {
+  stroke: #5d7769;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tower-right {
+  stroke-width: 2.5;
+}
+
+.power-wires {
+  fill: none;
+  stroke: #455f53;
+  stroke-width: 2;
+  opacity: .95;
+}
+
+/* Leaves */
+.leaves {
+  position: absolute;
+  z-index: 1;
+  bottom: -8px;
+  width: 145px;
+  height: 205px;
+  pointer-events: none;
+}
+
+.leaves-left {
+  left: -3px;
+}
+
+.leaves-right {
+  right: -3px;
+}
+
+.stem {
+  fill: none;
+  stroke: #376f48;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.leaf {
+  stroke: #376f48;
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.leaf-a, .leaf-c {
+  fill: #9edb85;
+}
+
+.leaf-b {
+  fill: #56a765;
+}
+
+.leaf-d {
+  fill: #6cbd69;
+}
+
+/* Hero content */
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  max-width: 95%;
+  padding: 10px 23px;
+  margin-bottom: 22px;
+  border-radius: 50px;
+  background: #ffffffa3;
+  border: 1px solid #ffffffd9;
+  color: #285f63;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile-ring {
+  width: 215px;
+  height: 215px;
+  margin: 0 auto 20px;
+  padding: 7px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ffe47c, #ff9c9f, #c79bff, #6ed1e6, #9adf9d, #ffe47c
+  );
+  box-shadow: 0 13px 32px #326f712b;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.hero-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 45px 30px;
+  border-radius: 34px;
+  background: #fffefaed;
+  box-shadow: 0 22px 60px #386c5b1c;
+}
+
+.hello {
+  color: #368d62;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.hero-card h1 {
+  font-size: clamp(42px, 4.2vw, 60px);
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #278c91, #3a8b61, #858a87);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-card h2 {
+  font-size: 19px;
+  margin: 7px 0 13px;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-pills {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.hero-pills span {
+  background: #e5f4df;
+  color: #34794e;
+  border-radius: 30px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 40px;
+  color: white;
+  background: linear-gradient(110deg, #258ab3, #35a16b);
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px #298d801e;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 28px #298d8038;
+}
+
+.motto {
+  margin: 20px auto 0;
+  padding-bottom: 30px;
+  color: #315c3b;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* ALL LOWER SECTIONS */
+.section {
+  position: relative;
+  padding: 70px 6%;
+  background-size: 300% 300%;
+  animation: rainbowBackground 18s ease infinite;
+}
+
+.section-about {
+  background-image: linear-gradient(
+    120deg, #fbe7ef, #ffe9d8, #fff2d1, #fbe7ef
+  );
+}
+
+.section-skills {
+  background-image: linear-gradient(
+    120deg, #e3efff, #f1e7ff, #e1f6ec, #fff0e4
+  );
+}
+
+.section-projects {
+  background-image: linear-gradient(
+    120deg, #fff0dc, #f5e3ff, #e0edff, #e4f8e9
+  );
+}
+
+.section-certificates {
+  background-image: linear-gradient(
+    120deg, #fce2ee, #fff0d0, #ddf5e6, #e5e9ff
+  );
+}
+
+.section-contact {
+  background-image: linear-gradient(
+    120deg, #dceeff, #f4e3ff, #ffe7df, #e0f5e7
+  );
+}
+
+@keyframes rainbowBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.heading-icon {
+  width: 66px;
+  height: 66px;
+  display: inline-grid;
+  place-items: center;
+  background: #ffffffd9;
+  border-radius: 20px;
+  font-size: 30px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px #476d6210;
+}
+
+.eyebrow {
+  color: #55786c;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.3;
+  color: #31575c;
+  margin: 9px 0 17px;
+}
+
+.heading-underline {
+  display: block;
+  width: 115px;
+  height: 5px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #ffc47e, #db8ccc, #88cdb1);
+}
+
+/* About content */
+.about-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 35px 40px;
+  border-radius: 25px;
+  background: #ffffffdf;
+  border-left: 6px solid #e79cc4;
+  box-shadow: 0 14px 36px #6b688015;
+  font-size: 16px;
+}
+
+.about-card p + p {
+  margin-top: 20px;
+}
+
+.about-details {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-details div {
+  padding: 15px 17px;
+  border-radius: 14px;
+  background: #f4f8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-details strong {
+  color: #347e66;
+  font-size: 14px;
+}
+
+.about-details span {
+  font-size: 14px;
+}
+
+/* Pastel cards */
+.card-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.content-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 28px 30px;
+  border-radius: 25px;
+  border: 1px solid #ffffffc9;
+  box-shadow: 0 12px 30px #4d6c7010;
+  transition: transform .15s ease, box-shadow .22s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px #4d6c7020;
+}
+
+.content-card::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -40px;
+  top: -50px;
+  border-radius: 50%;
+  background: #ffffff66;
+}
+
+.pastel-pink {
+  background: linear-gradient(135deg, #f9d9e9, #fff0f5);
+}
+
+.pastel-green {
+  background: linear-gradient(135deg, #d7f5df, #efffed);
+}
+
+.pastel-blue {
+  background: linear-gradient(135deg, #cfeaff, #eef8ff);
+}
+
+.pastel-yellow {
+  background: linear-gradient(135deg, #fff0b7, #fffbe5);
+}
+
+.pastel-lavender {
+  background: linear-gradient(135deg, #e6d4ff, #f7efff);
+}
+
+.card-icon {
+  display: inline-block;
+  font-size: 29px;
+  margin-bottom: 12px;
+}
+
+.card-number {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  color: #55756c;
+  font-size: 15px;
+  font-weight: 800;
+  opacity: .55;
+}
+
+.content-card h3 {
+  position: relative;
+  z-index: 1;
+  color: #31575c;
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.content-card p {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.card-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 14px;
+  border-radius: 25px;
+  background: #ffffffd9;
+  color: #42675d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Contact */
+.contact-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px;
+  text-align: center;
+  border-radius: 25px;
+  background: #ffffffdf;
+  box-shadow: 0 12px 35px #456c7115;
+}
+
+.contact-card p {
+  max-width: 750px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  padding: 26px 15px;
+  text-align: center;
+  background: #ffffff;
+  color: #55776b;
+  font-size: 13px;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 800px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 5%;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 18px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 35px 14px 0;
+  }
+
+  .sun {
+    width: 95px;
+    height: 95px;
+    top: 95px;
+    right: 7%;
+  }
+
+  .cloud-one {
+    left: -50px;
+    top: 115px;
+    transform: scale(.65);
+  }
+
+  .cloud-two {
+    right: -70px;
+    top: 290px;
+    transform: scale(.55);
+  }
+
+  .cloud-three {
+    top: 35px;
+    left: 35%;
+    transform: scale(.4);
+  }
+
+  .birds-one {
+    left: 4%;
+    top: 270px;
+    font-size: 18px;
+  }
+
+  .birds-two {
+    right: 12%;
+    top: 350px;
+    font-size: 17px;
+  }
+
+  .transmission {
+    width: 125%;
+    left: -12.5%;
+    height: 280px;
+    bottom: 25px;
+  }
+
+  .leaves {
+    width: 85px;
+    height: 130px;
+  }
+
+  .hero-tag {
+    font-size: 12px;
+    padding: 8px 12px;
+    margin-bottom: 22px;
+  }
+
+  .profile-ring {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 17px;
+  }
+
+  .hero-card {
+    padding: 22px 18px 26px;
+    border-radius: 25px;
+  }
+
+  .hero-card h1 {
+    font-size: clamp(36px, 9vw, 49px);
+    letter-spacing: -1px;
+  }
+
+  .hero-card h2 {
+    font-size: 16px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .hero-pills {
+    gap: 7px;
+  }
+
+  .hero-pills span {
+    font-size: 12px;
+    padding: 6px 11px;
+  }
+
+  .primary-button {
+    font-size: 14px;
+    padding: 12px 21px;
+  }
+
+  .motto {
+    font-size: 11px;
+    line-height: 1.9;
+    padding: 0 4px 25px;
+  }
+
+  .section {
+    padding: 55px 16px;
+  }
+
+  .section-heading {
+    margin-bottom: 27px;
+  }
+
+  .about-card {
+    padding: 23px;
+    font-size: 14px;
+  }
+
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .content-card {
+    padding: 23px;
+  }
+
+  .content-card h3 {
+    font-size: 18px;
+  }
+
+  .content-card p {
+    font-size: 14px;
+  }
+
+  .contact-card {
+    padding: 25px 20px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== CLEAN FINAL EFFECTS ===== */
+
+/* Education section */
+.section-education {
+  background: linear-gradient(120deg, #d9f0e0, #dceeff, #eee1ff, #ffe8d8);
+  background-size: 300% 300%;
+}
+
+/* Hero sizing */
+.hero {
+  padding-top: 30px;
+  min-height: 760px;
+}
+
+.hero-tag {
+  margin-bottom: 15px;
+}
+
+.hero-card {
+  max-width: 940px;
+  padding: 20px 35px 25px;
+}
+
+.hero-description {
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* Sun glow */
+.sun {
+  animation: sunShine 3s ease-in-out infinite;
+  box-shadow:
+    0 0 0 22px #ffe98b55,
+    0 0 45px #fff2a0,
+    0 0 85px #fff2a0cc;
+}
+
+@keyframes sunShine {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(1.2);
+  }
+}
+
+
+/* Clouds move gently */
+.cloud-one { animation: cloudMove 15s ease-in-out infinite alternate; }
+.cloud-two { animation: cloudMove 10s ease-in-out infinite alternate-reverse; }
+.cloud-three { animation: cloudMove 20s ease-in-out infinite alternate; }
+
+@keyframes cloudMove {
+  to { translate: 45px 0; }
+}
+
+.birds {
+  z-index: 1;
+  will-change: transform;
+}
+
+.birds-one {
+  top: 290px;
+  left: 18%;
+  animation: birdRight 8s ease-in-out infinite alternate;
+}
+
+.birds-two {
+  top: 370px;
+  right: 21%;
+  animation: birdLeft 8s ease-in-out infinite alternate;
+}
+
+@keyframes birdRight {
+  from { transform: translateX(-20px); }
+  to { transform: translateX(150px); }
+}
+
+@keyframes birdLeft {
+  from { transform: translateX(20px); }
+  to { transform: translateX(-150px); }
+}
+
+
+
+/* Perfect circular photo with a visible, thin rainbow ring */
+.profile-ring {
+  width: 225px !important;
+  height: 225px !important;
+  padding: 0 !important;
+  margin: 0 auto 18px;
+  position: relative;
+  isolation: isolate;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}.profile-ring {
+  width: 225px !important;
+  height: 225px !important;
+  padding: 0 !important;
+  margin: 0 auto 18px;
+  position: relative;
+  isolation: isolate;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  transform: translateY(5px);
+}
+
+.profile-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 60%;
+  background: conic-gradient(
+    #00eaff,
+    #536dff,
+    #bd45ff,
+    #ff3d9a,
+    #ff982e,
+    #fff52e,
+    #38ffae,
+    #00eaff
+  );
+  animation: photoRingSpin 4s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.profile-photo {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  border-radius: 50% !important;
+  border: 3px solid white !important;
+  box-sizing: border-box;
+  filter: none !important;
+  animation: none !important;
+}
+
+@keyframes photoRingSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Bright rainbow corner with clearly visible yellow */
+.content-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+
+/* Small colourful rainbow corners */
+.content-card::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  top: -35px;
+  right: -30px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff8c00,
+    #fff000,
+    #7dff35,
+    #00cfff,
+    #7955ff,
+    #ff4fc8,
+    #ff8c00
+  );
+  opacity: .95;
+  animation: cornerSpin 5s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Keep tower bodies steady */
+.transmission .tower {
+  animation: none !important;
+  filter: none !important;
+}
+
+.transmission .tower-arms {
+  fill: none;
+  stroke: #5d7769;
+  stroke-width: 3;
+  animation: armSpark 2.2s ease-in-out infinite;
+}
+
+.transmission .tower-right .tower-arms {
+  animation-delay: -1s;
+}
+
+@keyframes armSpark {
+  0%, 72%, 100% { stroke: #5d7769; filter: none; }
+  76% { stroke: #baffed; filter: drop-shadow(0 0 3px #6effdb); }
+  80% { stroke: #5d7769; filter: none; }
+  84% { stroke: #e0ffff; filter: drop-shadow(0 0 5px #55eaff); }
+}
+
+/* Flowing light along wires */
+.transmission .power-wires path {
+  fill: none;
+  stroke: #455f53;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  animation: wireFlow 2.5s ease-in-out infinite;
+}
+
+.transmission .power-wires path:nth-child(2) { animation-delay: -.4s; }
+.transmission .power-wires path:nth-child(3) { animation-delay: -.8s; }
+.transmission .power-wires path:nth-child(4) { animation-delay: -1.2s; }
+.transmission .power-wires path:nth-child(5) { animation-delay: -1.6s; }
+.transmission .power-wires path:nth-child(6) { animation-delay: -2s; }
+
+@keyframes wireFlow {
+  0%, 100% { stroke: #455f53; filter: none; }
+  45%, 60% { stroke: #cafffa; filter: drop-shadow(0 0 5px #58ffe1); }
+}
+
+/* Leaves sway in the breeze */
+.leaves .leaf {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: leafSway 2.5s ease-in-out infinite alternate;
+}
+
+.leaves .leaf-b { animation-delay: -.6s; }
+.leaves .leaf-c { animation-delay: -1.2s; }
+.leaves .leaf-d { animation-delay: -1.8s; }
+
+@keyframes leafSway {
+  from { transform: rotate(-4deg); }
+  to { transform: rotate(4deg); }
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding-top: 30px;
+  }
+
+  .profile-ring {
+    width: 190px !important;
+    height: 190px !important;
+  }
+
+  .hero-card {
+    padding: 20px 18px 25px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .birds-one {
+    top: 260px;
+    left: 5%;
+    font-size: 19px;
+  }
+
+  .birds-two {
+    top: 345px;
+    right: 8%;
+    font-size: 18px;
+  }
+
+  .transmission {
+    width: 125%;
+    left: -12.5%;
+    height: 300px;
+    bottom: 20px;
+  }
+
+  .section {
+    padding: 45px 16px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-learning,
+  .section-contact {
+    padding: 45px 16px;
+  }
+}
+
+
+
+/* Mobile par photo frame */
+@media (max-width: 800px) {
+  .profile-ring {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+/* 2. Sun thoda chhota */
+.sun {
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 800px) {
+  .sun {
+    width: 90px;
+    height: 90px;
+  }
+}
+/* Birds fly from left to right */
+.birds-one {
+  left: 0;
+  top: 290px;
+  animation: flyLeftToRight 15s linear infinite !important;
+}
+
+@keyframes flyLeftToRight {
+  from {
+    left: -60px;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-18px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  75% {
+    transform: translateY(-15px);
+  }
+
+  to {
+    left: calc(100% + 20px);
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Thin animated rainbow line on top of each box */
+.content-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 25px 25px 0 0;
+
+  background: linear-gradient(
+    90deg,
+    #e78181,
+    #e7c085,
+    #f4f45d,
+    #7ae44d,
+    #75d7ed,
+    #8b70ec,
+    #ea71c4,
+    #eb7373
+  );
+
+  background-size: 300% 100%;
+  animation: rainbowLine 10s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes rainbowLine {
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
+}
+a.certificate-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #5299e4;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+a.certificate-btn:hover {
+    background: #0056b3;
+}
